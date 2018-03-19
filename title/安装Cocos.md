@@ -1,11 +1,12 @@
 # Mac安装配置Cocos
 
-###1、下载
+<h3>1、下载</h3>
+
 <a href='http://cocos2d-x.org/filedown/CocosCreator_v1.9.0_mac'>快速下载</a>
 
 <a href='http://www.cocos.com/download'>Cocos 版本选择</a>
 
-###2、安装
+<h3>2、安装</h3>
 将下载好文件解压出来，然后移至`/usr/local/`目录下；
 
 在终端切换路径至`cocos`下，运行命令`./setp.py`；
@@ -21,5 +22,5 @@
 > 
 > <a href='http://mirrors.shu.edu.cn/apache//ant/binaries/apache-ant-1.10.2-bin.zip'>Ant 快速下载</a>，<a href='https://ant.apache.org/bindownload.cgi'>Ant 版本选择</a>
 > 
-> 然后将以上下载好文件解压出来，放至`/usr/local`中，（可放可不放）然后将对应的路径填给`ANDROID_NDK_ROOT` `ANDROID_SDK_ROOT` `ANT_ROOT`
+> 然后将以上下载好文件解压出来，放至`/usr/local`中，（可放可不放）然后将对应的路径填给`ANDROID_NDK_ROOT` `ANDROID_SDK_ROOT` `ANT_ROOT`。
 
