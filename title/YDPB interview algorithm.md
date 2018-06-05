@@ -1,13 +1,6 @@
-
-<h1><a href='../README.md'>返回列表</a> </h1>
-
-#某跑步App公司算法面试题
+<H1>某跑步App公司算法面试题</H1>
 
 1、有元素个数为n的整形数组，数组元素值范围在[1, 13]，请将数组中任意两元素相加之和为14的元素从数组中删除；
-
-2、逐层遍历二叉树；
-
-以下为代码实现：
 
 	/**
 	 根据索引将某个元素从数组中移除
@@ -32,19 +25,10 @@
 	    }
 	    printf("\n");
 	}
-	
-	@interface Tree : NSObject
-	@property (nonatomic, strong) Tree *left;
-	@property (nonatomic, strong) Tree *right;
-	@property (nonatomic, copy) NSString *node;
-	@end
-	
-	@implementation Tree
-	@end
 
 	@implementation XxxInterview
 
-	+ (void)remove14Array {
+	void remove14Array() {
     
 	#define kCount 10
 	#define kRemoveSum 14
@@ -81,7 +65,18 @@
 	    printArray(number, count);
 	}
 
-	+ (void)boardFirstVisitTree {
+2、逐层遍历二叉树；
+
+	@interface Tree : NSObject
+	@property (nonatomic, strong) Tree *left;
+	@property (nonatomic, strong) Tree *right;
+	@property (nonatomic, copy) NSString *node;
+	@end
+	
+	@implementation Tree
+	@end
+
+	void boardFirstVisitTree() {
 	    /// 将树子节点保存至队列中，每次访问队首；并将队首的左右节点添加至队尾
 	    Tree *tree = [[Tree alloc] init];
 	    NSMutableArray <Tree *> *queue = @[tree].mutableCopy;
@@ -94,4 +89,5 @@
 	    }
 	}
 	
-	@end
+
+<h1><a href='../README.md'>返回列表</a> </h1>
