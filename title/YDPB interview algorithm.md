@@ -26,8 +26,6 @@
 	    printf("\n");
 	}
 
-	@implementation XxxInterview
-
 	void remove14Array() {
     
 	#define kCount 10
