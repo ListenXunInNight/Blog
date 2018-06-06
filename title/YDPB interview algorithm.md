@@ -1,23 +1,9 @@
 <H1>某跑步App公司算法面试题</H1>
 
-1、有元素个数为n的整形数组，数组元素值范围在[1, 13]，请将数组中任意两元素相加之和为14的元素从数组中删除；
+>当然笔试题不只这两道，还有很多，其中最深刻的是  `weak` `strong` `copy`  `assign` `__block` `__weak` 这几个修饰符的深层考察（光这些就讲了大概有半个小时）。闲话休絮，请看正题：
 
-	/**
-	 根据索引将某个元素从数组中移除
-	
-	 @param arr 数组
-	 @param count 元素数量
-	 @param index 下标
-	 */
-	void arrayRemoveElementAtIndex(int *arr, int count, int index) {
-	    
-	    if (index >= count) return;
-	    
-	    for (int i = index; i < count - 1; i++) {
-	        arr[i] = arr[i + 1];
-	    }
-	}
-	
+<H3>1、有元素个数为n的整形数组，数组元素值范围在[1, 13]，请将数组中任意两元素相加之和为14的元素从数组中删除；<H3>
+
 	void printArray(int *arr, int count) {
 	    printf("打印所有元素\n");
 	    for (int i = 0; i < count; i++) {
@@ -25,15 +11,15 @@
 	    }
 	    printf("\n");
 	}
-
-	void remove14Array() {
-    
+	
 	#define kCount 10
 	#define kRemoveSum 14
+	
+	void remove14Array() {
 	    
 	    /// 待剔除数据数组，需要剔除的元素的下标数组，元素值为1表示需要剔除，否则不需要
 	    int number[kCount] = {0}, index[kCount] = {0};
-	    int count = kCount;
+
 	    /// 赋值
 	    for (int i = 0; i < kCount; i++) {
 	        number[i] = 1 + arc4random() % 13;
@@ -52,18 +38,21 @@
 	            }
 	        }
 	    }
-	    printArray(number, count);
-	    /// 从后往前删，防止下标错乱
-	    for (int i = kCount - 1; i >= 0; i--) {
-	        if (index[i]) {
-	            arrayRemoveElementAtIndex(number, count, i);
-	            count --;
+	    printArray(number, kCount);
+	    
+		int deletedCount = 0;
+		for (int i = 0, j = 0; i < kCount - deletedCount;j++) {
+	        if (index[j]) deletedCount ++;
+	        else {
+	            /// 移除第i + deletedCount
+	            number[i] = number[i + deletedCount];
+	            i++;
 	        }
 	    }
-	    printArray(number, count);
+	    printArray(number, kCount - deletedCount);
 	}
 
-2、逐层遍历二叉树；
+<H3>2、逐层遍历二叉树；<H3>
 
 	@interface Tree : NSObject
 	@property (nonatomic, strong) Tree *left;
