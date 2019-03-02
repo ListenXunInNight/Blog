@@ -7,4 +7,10 @@
 
 
 
+## 目录
+
+1. [Swift Perfect 在 阿里云上部署](./Deployment Swift Perfect  code to Aliyun server.md)
+
+
+
 <h1><a href='../../README.md'>返回列表</a> </h1>
